@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Agent Standalone",
+            "request": "launch",
+            "mainClass": "com.shanyangcode.infintechatagent.InfiniteChatAgentApplication",
+            "projectName": "IM-Agent",
+            "vmArgs": "-Dspring.profiles.active=standalone",
+            "console": "integratedTerminal"
+        }
+    ]
+}
