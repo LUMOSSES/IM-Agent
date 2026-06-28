@@ -1,0 +1,9 @@
+# =========================================
+# 独立演示模式（standalone）
+# 启动: mvn spring-boot:run -Dspring-boot.run.profiles=standalone
+# 前端: http://localhost:8087/api/index.html
+# =========================================
+
+agent:
+  auth:
+    enabled: false  # 关闭 JWT 认证和 Gateway 来源检查

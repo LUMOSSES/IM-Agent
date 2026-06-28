@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ChatAgentApplication",
+            "request": "launch",
+            "mainClass": "com.aiagent.chatagent.ChatAgentApplication",
+            "projectName": "chat-agent"
+        },
+        {
+            "type": "java",
+            "name": "Agent Standalone",
+            "request": "launch",
+            "mainClass": "com.aiagent.chatagent.ChatAgentApplication",
+            "projectName": "chat-agent",
+            "vmArgs": "-Dspring.profiles.active=standalone",
+            "console": "integratedTerminal"
+        }
+    ]
+}

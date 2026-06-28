@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: Chat-Agent
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: your-redis-password
+      ttl: 3600
+      timeout: 30000
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: your-email
+    password: your-smtp-code
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 8087
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    dev.langchain4j.mcp: ERROR
+
+pgvector:
+  database: dp
+  host: 127.0.0.1
+  port: 5432
+  user: root
+  password: your-pg-password
+  table: dp_embedding
+
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        model-name: qwen-max
+        api-key: your-dashscope-api-key
+      streaming-chat-model:
+        model-name: qwen-max
+        api-key: your-dashscope-api-key
+      embedding-model:
+        model-name: text-embedding-v4
+        api-key: your-dashscope-api-key
+
+bigmodel:
+  api-key: your-zhipu-api-key
+
+rag:
+  docs-path: src/main/resources/docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
